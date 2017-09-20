@@ -1,0 +1,33 @@
+page-home {
+	h3{
+		font-weight: 600;
+		text-align: center;
+		font-size: 16px;
+		width: 100%;
+	}
+	.scroll-content {
+		display: block;
+	}
+	.image-wrapper {
+		width: 100%;
+	}
+	.toolbar-background {
+		background-color: #1F9900;
+		color: #ffffff;
+	}
+	.toolbar-title-md{
+		color: #ffffff;
+	}
+	.start-api{
+		display: none;
+	}
+	.label-md{
+		width: 97%;
+	}
+	.start-arrow{
+		position: absolute;
+		width: 58%;
+		bottom: 61px;
+		left: 76px;
+	}
+}

@@ -1,0 +1,78 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>
+			Policía Nacional de Colombia
+		</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<h3>{{status}}</h3>
+	<span>{{recognizedText}}</span>
+	<img src="assets/img/demo.png" #demoImg class="start-api" />
+	<img [src]="image" #imageResult />
+	
+	<div *ngIf="_ocrIsLoaded && !image">
+			<img src="assets/img/Start-arrow.png" #start class="start-arrow" />
+	</div>
+	<div *ngIf="image && showEditFilters">
+			<ion-list>
+					<ion-list-header>
+						Adjust Image Filters
+					</ion-list-header>
+
+					<ion-item>
+						<ion-label>Brightness</ion-label>
+						<ion-range min="-100" max="100" pin="true" step="1" [(ngModel)]="brightness" color="secondary">
+							<ion-icon range-left small name="sunny"></ion-icon>
+							<ion-icon range-right name="sunny"></ion-icon>
+						</ion-range>
+					</ion-item>
+
+					<ion-item>
+						<ion-label>Contrast</ion-label>
+						<ion-range min="-100" max="100" pin="true" step="1" [(ngModel)]="contrast" color="secondary">
+							<ion-icon range-left small name="contrast"></ion-icon>
+							<ion-icon range-right name="contrast"></ion-icon>
+						</ion-range>
+					</ion-item>
+
+					<ion-item>
+						<ion-label>UnsharpMask Radius</ion-label>	
+						<ion-range min="0" max="200" pin="true" step="1" [(ngModel)]="unsharpMask.radius" color="secondary">
+							<ion-icon range-left small name="ios-radio"></ion-icon>
+							<ion-icon range-right name="ios-radio"></ion-icon>
+						</ion-range>
+					</ion-item>
+
+					<ion-item>
+						<ion-label>UnsharpMask Strength</ion-label>
+						<ion-range min="0" max="5" step="0.5" pin="true" [(ngModel)]="unsharpMask.strength" color="secondary">
+							<ion-icon range-left small name="md-cog"></ion-icon>
+							<ion-icon range-right name="md-cog"></ion-icon>
+						</ion-range>
+					</ion-item>
+
+					<ion-item>
+						<ion-label>Hue</ion-label>
+						<ion-range min="-100" max="100" pin="true" step="1" [(ngModel)]="hue" color="secondary">
+							<ion-icon range-left small name="md-color-palette"></ion-icon>
+							<ion-icon range-right name="md-color-palette"></ion-icon>
+						</ion-range>
+					</ion-item>
+
+					<ion-item>
+						<ion-label>Saturation</ion-label>
+						<ion-range min="-100" max="100" pin="true" step="1" [(ngModel)]="saturation" color="secondary">
+							<ion-icon range-left small name="thermometer"></ion-icon>
+							<ion-icon range-right name="thermometer"></ion-icon>
+						</ion-range>
+					</ion-item>
+
+				</ion-list>
+	</div>
+
+	<ion-fab right bottom>
+		<button ion-fab (click)="openMenu()" color="danger"><ion-icon name="add"></ion-icon></button>
+	</ion-fab>
+</ion-content>
