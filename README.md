@@ -15,4 +15,4 @@ A simple app to show how to implement OCR with Ionic 3.x
 
 ## Deploy in device
 
-> cordova run android
+> ionic cordova run android

@@ -27,6 +27,8 @@ export class HomePage {
 
   showEditFilters: boolean = false;
 
+  debugText: string = '';
+
   constructor(
     private camera: Camera,
     public navCtrl: NavController,
@@ -161,6 +163,7 @@ export class HomePage {
       loader.dismissAll();
 
       this.image = imageURI;
+      this.debugText = imageURI;
 
     }, (err) => {
       console.log(`ERROR -> ${JSON.stringify(err)}`);

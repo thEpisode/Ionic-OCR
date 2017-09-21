@@ -2,5 +2,7 @@
   "name": "multas-ocr",
   "app_id": "9cdd044d",
   "type": "ionic-angular",
-  "integrations": {}
+  "integrations": {
+    "cordova": {}
+  }
 }

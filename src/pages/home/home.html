@@ -7,6 +7,7 @@
 </ion-header>
 
 <ion-content padding>
+  <h3 *ngIf="debugText">Debug: {{debugText}}</h3>
 	<span>{{recognizedText}}</span>
 	<img src="assets/img/demo.png" #demoImg class="start-api" />
 	<img [src]="image" #imageResult />
