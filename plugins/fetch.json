@@ -62,5 +62,13 @@
         },
         "is_top_level": true,
         "variables": {}
+    },
+    "cordova-plugin-ionic": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-ionic@1.1.9"
+        },
+        "is_top_level": true,
+        "variables": {}
     }
 }
