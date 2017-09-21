@@ -13,10 +13,10 @@ A simple app to show how to implement OCR with Ionic 3.x
 
 > ionic serve
 
-## Build
+### Build
 
 > ionic build
 
-## Deploy in device
+### Deploy in device
 
 > ionic cordova run android
